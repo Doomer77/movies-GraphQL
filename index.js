@@ -3,9 +3,7 @@ import resolvers from "./graphql/resolvers";
 
 const server = new GraphQLServer({
   typeDefs: "graphql/schema.graphql",
-  resolvers: resolvers,
+  resolvers,
 });
 
-server.start(() => {
-  console.log(`Сервер GraphQL успешно запущен`);
-});
+server.start(() => console.log("Сервер GraphQL успешно запущен"));
